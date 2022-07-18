@@ -1,0 +1,92 @@
+body {
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  background-image: url("https://cdn.mos.cms.futurecdn.net/umZ77QZznAZ5FdZG94mGRe.jpg");
+}
+
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+}
+.container {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#charactersList {
+  padding-inline-start: 0;
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.character {
+  background-color: #dfdddd;
+  
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqIHGtcQCVhuRtlXx3VyDKRF3n0dp3YK2sCA&usqp=CAU");
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 5px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 50px;
+  color: rgb(239, 243, 247);
+  
+}
+
+.character:hover {
+  /* box-shadow: #514747; */
+  box-shadow: 5px 10px #080000;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/625/387/755/arcane-jinx-league-of-legends-league-of-legends-riot-games-4k-hd-wallpaper-preview.jpg");
+  color: wheat;
+  opacity: 1;
+}
+
+.character > h2 {
+  grid-area: name;
+  margin-bottom: 0px;
+  font-size:larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.character > p {
+  grid-area: house;
+  margin: 0;
+  margin-top: -18px;
+
+}
+
+.character > img {
+  max-height: 100px;
+  grid-area: image;
+}
+
+#searchBar {
+  width: 100%;
+  height: 32px;
+  border-radius: px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 12px; 
+}
+
+#searchWrapper {
+  
+  position:sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#searchWrapper::after {
+  content: '🔍';
+  position: absolute;
+  top: 4px;
+  right: 15px;
+  border-radius: 50px;
+}
